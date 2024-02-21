@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    remotePatterns: [{ hostname: "placehold.co" }],
+    remotePatterns: [{ hostname: "cdn.myanimelist.net" }],
   },
 };
 

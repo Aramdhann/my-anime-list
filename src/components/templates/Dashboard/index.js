@@ -1,13 +1,33 @@
-import AnimeList from "@/components/organism/AnimeList";
+import Card from "@/components/molecules/Card";
+import Header from "@/components/molecules/Card/Header";
 
-const Dashboard = () => {
+const Home = async () => {
+  const response = await fetch(
+    `${process.env.NEXT_PUBLIC_API_BASE_URL}/top/anime`
+  );
+  const anime = await response.json();
+
   return (
     <>
       <section className="container px-3 md:px-0 flex flex-col items-center">
-        <AnimeList />
+        <div className="w-full">
+          <Header titleList={"Popular Anime"} />
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+          {anime.data.map((data) => {
+            return (
+              <Card
+                title={data.title}
+                alt={data.title}
+                images={data.images.webp.image_url}
+                score={data.score}
+              />
+            );
+          })}
+        </div>
       </section>
     </>
   );
 };
 
-export default Dashboard;
+export default Home;

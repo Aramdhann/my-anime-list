@@ -1,8 +1,6 @@
-const NavbarButton = (props) => {
-  const { buttonTitle } = props;
-
+const NavbarButton = ({ buttonTitle }) => {
   return (
-    <button className="font-bold opacity-75 duration-500 ease-out hover:opacity-100 hover:ease-in">
+    <button className="font-bold opacity-100 duration-300 ease-out hover:opacity-75 hover:ease-in">
       {buttonTitle}
     </button>
   );
