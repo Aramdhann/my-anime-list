@@ -1,10 +1,9 @@
-import AnimeList from "@/pages/AnimeList/AnimeList";
-import Image from "next/image";
+import Dashboard from "@/components/templates/Dashboard";
 
 export default function Home() {
   return (
-    <div>
-      <AnimeList/>
+    <div className="flex flex-col items-center">
+      <Dashboard />
     </div>
   );
 }
