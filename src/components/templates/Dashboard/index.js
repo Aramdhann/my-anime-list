@@ -16,12 +16,16 @@ const Home = async () => {
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
           {anime.data.map((data) => {
             return (
-              <Card
-                title={data.title}
-                alt={data.title}
-                images={data.images.webp.image_url}
-                score={data.score}
-              />
+              <div key={data.mal_id}>
+                <Card
+                  title={data.title}
+                  alt={data.title}
+                  images={data.images.webp.image_url}
+                  score={data.score}
+                  id={data.mal_id}
+                  // keyProp={data.mal_id}
+                />
+              </div>
             );
           })}
         </div>
