@@ -7,7 +7,7 @@ const Card = ({ title, images, score, alt, id }) => {
     <div className="flex h-full">
       <Link
         href={`/${id}`}
-        className="flex w-fit max-w-[200px] flex-col gap-2 p-2 border border-zinc-600 rounded-lg duration-100 ease-out hover:border-blue-500 hover:ease-in hover:scale-105 cursor-pointer"
+        className="flex w-fit max-w-[200px] flex-col gap-2 p-2 border border-zinc-600 rounded-lg duration-100 ease-out hover:border-blue-500 hover:ease-in cursor-pointer"
       >
         <div className="relative">
           <div className="absolute bottom-0 h-[20%] bg-gradient-to-t from-black to-transparent opacity-45 rounded-b-lg w-full"></div>
