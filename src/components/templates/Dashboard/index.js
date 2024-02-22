@@ -3,7 +3,7 @@ import Header from "@/components/molecules/Card/Header";
 
 const Home = async () => {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_BASE_URL}/top/anime`
+    `${process.env.NEXT_PUBLIC_API_BASE_URL}/top/anime?limit=8`
   );
   const anime = await response.json();
 
