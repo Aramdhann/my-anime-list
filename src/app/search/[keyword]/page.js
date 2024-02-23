@@ -1,9 +1,9 @@
-const Search = ({params}) => {
-    return (
-        <>
-        <p>search page {params.keyword}</p>
-        </>
-    )
-}
+const Search = ({ params }) => {
+  return (
+    <>
+      <p>search page {params.keyword}</p>
+    </>
+  );
+};
 
-export default Search
+export default Search;
