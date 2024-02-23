@@ -8,8 +8,12 @@ const Input = ({ placeholder, onFocus, onBlur }) => {
 
   const handleInputChange = useDebouncedCallback((e) => {
     const keyword = e.target.value;
-    replace(`/search/${keyword}`)
-  }, 700);
+    if (keyword.trim() === "") {
+      replace("/");
+    } else {
+      replace(`/search/${keyword}`);
+    }
+  }, 300);
 
   return (
     <>
