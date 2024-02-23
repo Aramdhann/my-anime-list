@@ -26,7 +26,7 @@ const Card = ({ title, images, score, alt, id }) => {
             className="rounded-lg max-h-[250px] object-cover"
           />
         </div>
-        <p className="font-bold">{title}</p>
+        <p className="font-bold text-xs md:text-sm lg:text-base">{title}</p>
       </Link>
     </div>
   );

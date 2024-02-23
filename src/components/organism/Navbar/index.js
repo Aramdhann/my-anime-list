@@ -1,7 +1,7 @@
 "use client";
 
 import NavbarButton from "@/components/atoms/Button/NavbarButton";
-import Input from "@/components/atoms/Input";
+import Search from "@/components/atoms/Search";
 import { useState } from "react";
 
 const Navbar = () => {
@@ -17,18 +17,18 @@ const Navbar = () => {
 
   return (
     <header className="flex justify-center w-full mb-3 bg-blue-500 p-4 sticky top-0 z-10">
-      <div className="container flex flex-wrap justify-between">
+      <div className="container flex flex-wrap justify-between items-center">
         <a
           href="/"
           id="nav-title"
-          className={`uppercase font-bold text-white text-xl float-left ${
-            isInputFocused ? "hidden" : ""
+          className={`uppercase font-bold text-white text-sm sm:text-base lg:text-xl float-left sm:mb-0 ${
+            isInputFocused ? "hidden sm:block" : ""
           }`}
         >
           myanimelist
         </a>
-        <Input
-          placeholder={"🔎 Search anime ..."}
+        <Search
+          placeholder={"Search anime ..."}
           onFocus={handleFocus}
           onBlur={handleBlur}
         />
