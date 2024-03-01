@@ -1,9 +1,7 @@
 import NotFound from "@/app/not-found";
 import AnimeList from "@/components/templates/AnimeList";
 import Header from "@/components/templates/AnimeList/Header";
-import Image from "next/image";
-import Link from "next/link";
-import { FaArrowLeft } from "react-icons/fa";
+
 
 const Page = async ({ params }) => {
   const { keyword } = params;
