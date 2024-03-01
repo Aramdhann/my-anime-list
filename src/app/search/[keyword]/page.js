@@ -1,3 +1,4 @@
+import NotFound from "@/app/not-found";
 import AnimeList from "@/components/templates/AnimeList";
 import Header from "@/components/templates/AnimeList/Header";
 import Image from "next/image";
@@ -38,15 +39,7 @@ const Page = async ({ params }) => {
         </div>
         <AnimeList api={searchAnime} />
         {totalAnime === 0 && (
-          <>
-            <div className="flex flex-col gap-2 justify-center items-center relative">
-              <Image src="/images/not_found.jpg" width={300} height={300} />
-              <p className="absolute bg-white text-zinc-800 p-2 font-bold top-0 mt-4">
-                Sorry! Anya can't find it 🥺
-              </p>
-            </div>
-            <Link className="flex items-center gap-2 p-2 mt-3 text-sm sm:text-base bg-blue-500 hover:opacity-75 duration-300" href='/'><FaArrowLeft/> Home</Link>
-          </>
+          <NotFound/>
         )}
       </section>
     </>
